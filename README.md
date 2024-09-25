@@ -1,8 +1,8 @@
 ## Hi there 👋
 
-🧑‍💻 Aspiring Developer
-🏫 Currently learning Python, Django, HTML, CSS, HTMX, and Tailwind CSS
-🔍 Actively seeking my first internship or job opportunity
+🧑‍💻 Aspiring Developer<br>
+🏫 Currently learning Python, Django, HTML, CSS, HTMX, and Tailwind CSS<br>
+🔍 Actively seeking my first internship or job opportunity<br>
 
 📫 Reach me at: trucodd456@gmail.com
 
