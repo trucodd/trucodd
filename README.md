@@ -1,5 +1,11 @@
 ## Hi there 👋
 
+🧑‍💻 Aspiring Developer
+🏫 Currently learning Python, Django, HTML, CSS, HTMX, and Tailwind CSS
+🔍 Actively seeking my first internship or job opportunity
+
+📫 Reach me at: trucodd456@gmail.com
+
 <!--
 **trucodd/trucodd** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
