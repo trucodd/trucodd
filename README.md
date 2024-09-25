@@ -6,7 +6,7 @@
 🌟 Skilled in Python, Django, HTML, CSS, HTMX, and Tailwind CSS<br> 
 🔍 Actively seeking internship or job opportunities in tech<br>
 🤝 Open to collaborating on open source projects<br>
-📫 Reach me at: trucodd@gmail.com
+📫 Reach me at: trucodd456@gmail.com
 
 
 <!--
