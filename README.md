@@ -3,7 +3,7 @@
 ### 👋 About Me
 
 🧑‍💻 Aspiring Software Developer<br> 
-🌟 Skilled in Python, Django, drf, HTML, CSS, HTMX, and Tailwind, docker CSS<br> 
+🌟 Skilled in Python, Django, drf, docker, HTML, CSS, HTMX, and Tailwind CSS<br> 
 🔍 Actively seeking internship or job opportunities in tech<br>
 🤝 Open to collaborating on open source projects<br>
 📫 Reach me at: trucodd456@gmail.com
