@@ -6,7 +6,6 @@
 🌟 Skilled in Python, Django, DRF, flask, SQL, docker, numpy, pandas, matplotlib, HTML, CSS, Tailwind CSS<br> 
 🔍 Actively seeking internship or job opportunities in tech<br>
 🤝 Open to collaborating on open source projects<br>
-📫 Reach me at: trucodd456@gmail.com
 
 
 <!--
