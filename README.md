@@ -4,7 +4,7 @@
 
 🧑‍💻 Always learning and exploring new technologies every day.<br> 
 🌟 I enjoy working on AI, web applications, and software development.<br> 
-🔍 Actively seeking internship or job opportunities in tech<br>
+🔍 Actively seeking internship or job opportunities in tech <br>
 🤝 Open to collaborating on open source projects<br>
 
 
