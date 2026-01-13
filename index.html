@@ -31,9 +31,11 @@
         success: function() {
           alert("Message sent successfully!");
           $("#submit-form")[0].reset();
+          $("#button").prop("disabled", false).text("SEND");
         },
         error: function() {
           alert("Something went wrong!");
+          $("#button").prop("disabled", false).text("SEND");
         }
       });
     });
