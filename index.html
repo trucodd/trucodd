@@ -21,26 +21,36 @@
     </form>
   </div>
 
-  <script>
-    $("#submit-form").submit(function(e) {
-      e.preventDefault();
-      $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbzBfKV1fLQyJBntu04A66VwQ5aL_pF41azXDEK-HfEPzscLVHpbNjoKSDnO0wd1M0a0/exec",
-        method: "POST",
-        data: $("#submit-form").serialize(),
-        success: function() {
-          alert("Message sent successfully!");
-          $("#submit-form")[0].reset();
-          $("#button").prop("disabled", false).text("SEND");
-          formSubmitting = false;
-        },
-        error: function() {
-          alert("Something went wrong!");
-          $("#button").prop("disabled", false).text("SEND");
-          formSubmitting = false;
-        }
-      });
+<script>
+  $("#submit-form").submit(function(e) {
+    e.preventDefault();
+
+    // Disable button and change text
+    const $btn = $("#button");
+    $btn.prop("disabled", true);
+    $btn.css("opacity", 0.6); // make it look disabled
+    $btn.text("Sending...");
+
+    $.ajax({
+      url: "https://script.google.com/macros/s/AKfycbzBfKV1fLQyJBntu04A66VwQ5aL_pF41azXDEK-HfEPzscLVHpbNjoKSDnO0wd1M0a0/exec",
+      method: "POST",
+      data: $("#submit-form").serialize(),
+      success: function() {
+        alert("Message sent successfully!");
+        $("#submit-form")[0].reset();
+        $btn.prop("disabled", false); // enable again
+        $btn.css("opacity", 1);
+        $btn.text("SEND");
+      },
+      error: function() {
+        alert("Something went wrong!");
+        $btn.prop("disabled", false); // enable again
+        $btn.css("opacity", 1);
+        $btn.text("SEND");
+      }
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
