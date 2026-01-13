@@ -30,20 +30,10 @@
       
       // Disable the button and change its appearance
       $submitBtn.prop("disabled", true);
-      $submitBtn.css({
-        "opacity": "0.6",
-        "cursor": "not-allowed"
-      });
       $submitBtn.text("SENDING...");
       
-      // Store original styles to restore later
-      var originalGradient = $submitBtn.css("background-image");
-      
-      // Change to a processing style (gray)
-      $submitBtn.css("background", "linear-gradient(135deg, #888888, #555555)");
-      
       $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbzBfKV1fLQyJBntu04A66VwQ5aL_pF41azXDEK-HfEPzscLVHpbNjoKSDnO0wd1M0a0/exec",
+        url: "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec",
         method: "POST",
         data: $("#submit-form").serialize(),
         success: function() {
@@ -51,26 +41,19 @@
           $("#submit-form")[0].reset();
           
           // Reset button after success
-          resetButton($submitBtn, originalGradient);
+          setTimeout(function() {
+            $submitBtn.prop("disabled", false);
+            $submitBtn.text("SEND");
+          }, 500); // Small delay to show success state
         },
         error: function() {
           alert("Something went wrong!");
           
           // Reset button after error
-          resetButton($submitBtn, originalGradient);
+          $submitBtn.prop("disabled", false);
+          $submitBtn.text("SEND");
         }
       });
-      
-      // Function to reset button to original state
-      function resetButton($btn, originalGradient) {
-        $btn.prop("disabled", false);
-        $btn.css({
-          "opacity": "1",
-          "cursor": "pointer",
-          "background-image": originalGradient
-        });
-        $btn.text("SEND");
-      }
     });
   </script>
 </body>
