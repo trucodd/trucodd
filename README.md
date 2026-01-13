@@ -12,7 +12,9 @@
 
 ## 📬 Contact Me
 
-[![Contact Form](images/contact.png)](https://trucodd.github.io/trucodd/)
+<a href="https://trucodd.github.io/trucodd/">
+  <img src="images/contact.png" width="400"/>
+</a>
 
 
 
