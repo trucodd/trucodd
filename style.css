@@ -37,14 +37,31 @@ textarea {
 }
 
 #button {
-    background: linear-gradient(135deg, #555555, #000000); /* gray to black */
+    background-color: cyan;
     text-align: center;
-    color: #ffffff; /* white text */
+    color: white;
     width: 30%;
     min-width: 100px;
     height: 40px;
     font-size: 18px;
     font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#button:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+#button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Loading state style */
+#button.sending {
+    background-color: #999;
 }
 
 /* If the screen size is 601px or more, set width to 600px. */
