@@ -32,10 +32,12 @@
           alert("Message sent successfully!");
           $("#submit-form")[0].reset();
           $("#button").prop("disabled", false).text("SEND");
+          formSubmitting = false;
         },
         error: function() {
           alert("Something went wrong!");
           $("#button").prop("disabled", false).text("SEND");
+          formSubmitting = false;
         }
       });
     });
