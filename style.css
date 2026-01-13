@@ -23,6 +23,11 @@ div {
     color: #000000; /* black text */
     background: linear-gradient(180deg, #ffffff, #cccccc); /* white to light gray */
     border: none;
+    outline: none; /* Remove blue outline on focus */
+}
+
+.data:focus {
+    background: linear-gradient(180deg, #ffffff, #cccccc); /* Keep same background on focus */
 }
 
 textarea {
@@ -34,8 +39,12 @@ textarea {
     color: #000000;
     background: linear-gradient(180deg, #ffffff, #cccccc);
     border: none;
+    outline: none; /* Remove blue outline on focus */
 }
 
+textarea:focus {
+    background: linear-gradient(180deg, #ffffff, #cccccc); /* Keep same background on focus */
+}
 
 #button {
     background: linear-gradient(135deg, #555555, #000000); /* gray to black */
@@ -46,20 +55,17 @@ textarea {
     height: 40px;
     font-size: 18px;
     font-weight: bold;
-    cursor: pointer; /* Add pointer cursor */
-    transition: all 0.3s ease; /* Smooth transition for state changes */
+    border: none;
+    cursor: pointer;
 }
 
 #button:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+    background: linear-gradient(135deg, #888888, #555555); /* lighter gray for disabled state */
 }
 
-#button:not(:disabled):hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
+/* If the screen size is 601px or more, set width to 600px. */
 @media only screen and (min-width: 601px) {
   div {
     width: 600px;
