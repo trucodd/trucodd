@@ -36,35 +36,30 @@ textarea {
     border: none;
 }
 
+
 #button {
-    background-color: cyan;
+    background: linear-gradient(135deg, #555555, #000000); /* gray to black */
     text-align: center;
-    color: white;
+    color: #ffffff; /* white text */
     width: 30%;
     min-width: 100px;
     height: 40px;
     font-size: 18px;
     font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: opacity 0.3s;
-}
-
-#button:hover:not(:disabled) {
-    opacity: 0.9;
+    cursor: pointer; /* Add pointer cursor */
+    transition: all 0.3s ease; /* Smooth transition for state changes */
 }
 
 #button:disabled {
-    background-color: #cccccc;
+    opacity: 0.6;
     cursor: not-allowed;
 }
 
-/* Loading state style */
-#button.sending {
-    background-color: #999;
+#button:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* If the screen size is 601px or more, set width to 600px. */
 @media only screen and (min-width: 601px) {
   div {
     width: 600px;
