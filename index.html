@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Contact Me</title>
   <link rel="stylesheet" href="style.css">
-
+  
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -21,46 +21,57 @@
     </form>
   </div>
 
-<script>
-  $("#submit-form").submit(function(e) {
-    e.preventDefault();
-    
-    // Get the submit button
-    var submitBtn = $("#button");
-    var originalText = submitBtn.text();
-    
-    // Disable the button and show loading state
-    submitBtn.prop("disabled", true);
-    submitBtn.text("Sending...");
-    submitBtn.css("opacity", "0.7");
-    submitBtn.css("cursor", "not-allowed");
-    
-    $.ajax({
-      url: "https://script.google.com/macros/s/AKfycbzBfKV1fLQyJBntu04A66VwQ5aL_pF41azXDEK-HfEPzscLVHpbNjoKSDnO0wd1M0a0/exec",
-      method: "POST",
-      data: $("#submit-form").serialize(),
-      success: function() {
-        alert("Message sent successfully!");
-        $("#submit-form")[0].reset();
-        
-        // Re-enable button and restore original state
-        submitBtn.prop("disabled", false);
-        submitBtn.text(originalText);
-        submitBtn.css("opacity", "1");
-        submitBtn.css("cursor", "pointer");
-      },
-      error: function() {
-        alert("Something went wrong!");
-        
-        // Re-enable button on error too
-        submitBtn.prop("disabled", false);
-        submitBtn.text(originalText);
-        submitBtn.css("opacity", "1");
-        submitBtn.css("cursor", "pointer");
+  <script>
+    $("#submit-form").submit(function(e) {
+      e.preventDefault();
+      
+      // Get the submit button
+      var $submitBtn = $("#button");
+      
+      // Disable the button and change its appearance
+      $submitBtn.prop("disabled", true);
+      $submitBtn.css({
+        "opacity": "0.6",
+        "cursor": "not-allowed"
+      });
+      $submitBtn.text("SENDING...");
+      
+      // Store original styles to restore later
+      var originalGradient = $submitBtn.css("background-image");
+      
+      // Change to a processing style (gray)
+      $submitBtn.css("background", "linear-gradient(135deg, #888888, #555555)");
+      
+      $.ajax({
+        url: "https://script.google.com/macros/s/AKfycbzBfKV1fLQyJBntu04A66VwQ5aL_pF41azXDEK-HfEPzscLVHpbNjoKSDnO0wd1M0a0/exec",
+        method: "POST",
+        data: $("#submit-form").serialize(),
+        success: function() {
+          alert("Message sent successfully!");
+          $("#submit-form")[0].reset();
+          
+          // Reset button after success
+          resetButton($submitBtn, originalGradient);
+        },
+        error: function() {
+          alert("Something went wrong!");
+          
+          // Reset button after error
+          resetButton($submitBtn, originalGradient);
+        }
+      });
+      
+      // Function to reset button to original state
+      function resetButton($btn, originalGradient) {
+        $btn.prop("disabled", false);
+        $btn.css({
+          "opacity": "1",
+          "cursor": "pointer",
+          "background-image": originalGradient
+        });
+        $btn.text("SEND");
       }
     });
-  });
-</script>
-
+  </script>
 </body>
 </html>
