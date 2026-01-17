@@ -21,13 +21,13 @@ div {
     height: 40px;
     font-size: 18px;
     color: #000000; /* black text */
-    background: linear-gradient(180deg, #ffffff, #cccccc); /* white to light gray */
+    background: linear-gradient(180deg, #ffffff, #ffffff); /* white to light gray */
     border: none;
     outline: none; /* Remove blue outline on focus */
 }
 
 .data:focus {
-    background: linear-gradient(180deg, #ffffff, #cccccc); /* Keep same background on focus */
+    background: linear-gradient(180deg, #ffffff, #ffffff); /* Keep same background on focus */
 }
 
 textarea {
@@ -37,13 +37,13 @@ textarea {
     height: 100px;
     font-size: 18px;
     color: #000000;
-    background: linear-gradient(180deg, #ffffff, #cccccc);
+    background: linear-gradient(180deg, #ffffff, #ffffff);
     border: none;
     outline: none; /* Remove blue outline on focus */
 }
 
 textarea:focus {
-    background: linear-gradient(180deg, #ffffff, #cccccc); /* Keep same background on focus */
+    background: linear-gradient(180deg, #ffffff, #ffffff); /* Keep same background on focus */
 }
 
 #button {
